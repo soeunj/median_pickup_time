@@ -25,7 +25,13 @@ mongoimport --db <<your db>> --collection pickup_time --type csv --fields <<fiel
 ```
 
 
-After importing data, clone this repository and run below command to run the app.
+After importing data, clone this repository and run below command to run the app:
 ```
 python api.py
+```
+
+
+To test this api:
+```
+HTTP GET /median_pickup_time?location_id=12&start_time=2019-01-09T11:00:00&end_time= 2019-01-09T12:00:00
 ```
