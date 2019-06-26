@@ -1,3 +1,7 @@
+# Median pickup time
+
+This api is designed to calculate median pickup time by location and time range.
+
 # Requirments
 
 For running this api, please install below items:
