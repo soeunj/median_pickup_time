@@ -16,10 +16,12 @@ def median_pickup_time():
     start_time = request.args.get('start_time')
     end_time = request.args.get('end_time')
     # aggregation
-    pipeline = [{"$match":{"location_id":int(location_id),"iso_8601_timestamp":{"$gte":start_time, "$lte":end_time}}},{"$group":{"_id":"$location_id", "median":{"$avg":"$pickup_time"}}}]
-    response = {}
+    pipeline = [{"$match":{"location_id":int(location_id),"iso_8601_timestamp":{"$gte":start_time, "$lte":end_time}}},\
+        {"$group":{"_id":"$location_id", "median":{"$avg":"$pickup_time"}}}]
+    result = {}
     for r in mongo.db.pickup_time.aggregate(pipeline):
-        response['median'] = r['median']
-    return response
+        result['median'] = r['median']
+    res = json.dumps(result)
+    return res
 
 app.run()
