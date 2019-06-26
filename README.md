@@ -19,7 +19,7 @@ mongod
 ```
 
 
-Run this command to import csv file to mongodb:
+Run the command to import csv file to mongodb:
 ```
 mongoimport --db <<your db>> --collection pickup_time --type csv --file <<pickup_times.csv file path>> --headerline
 ```
@@ -29,7 +29,7 @@ mongoimport --db <<your db>> --collection pickup_time --type csv --fields <<fiel
 ```
 
 
-After importing data, clone this repository and run below command to run the app:
+After importing data, clone this repository and run the command to run the app:
 ```
 python api.py
 ```
