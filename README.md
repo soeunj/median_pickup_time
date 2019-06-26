@@ -1,8 +1,4 @@
-# Median pickup time
-
-This api is designed to calculate median pickup time by location and time range.
-
-# Requirments
+# Instruction
 
 For running this api, please install below items:
 - MongoDB '3.6.x'~
