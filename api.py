@@ -20,7 +20,7 @@ def median_pickup_time():
         {"$group":{"_id":"$location_id", "median":{"$avg":"$pickup_time"}}}]
     result = {}
     for r in mongo.db.pickup_time.aggregate(pipeline):
-        result['median'] = r['median']
+        result['median'] = int(r['median'])
     res = json.dumps(result)
     return res
 
