@@ -16,6 +16,7 @@ mongod
 
 
 Run the command to import csv file to mongodb:
+
 (If you prefer to use different database and collection name, please change them in both below command and mongodb config part in api.py)
 ```
 mongoimport --db test --collection pickup_time --type csv --file <<pickup_times.csv file path>> --headerline
